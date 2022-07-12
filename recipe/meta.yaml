@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - pip
-    - poetry >=1.2.0
+    - poetry
     - poetry-dynamic-versioning-plugin
     - python >=3.6
   run:
