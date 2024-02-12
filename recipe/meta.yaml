@@ -1,5 +1,5 @@
 {% set name = "tmep" %}
-{% set version = "2.4.0" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e15a407b93ea4a017e715a486bf69f334bdb0bb9cf126a5bbfd7629eb2c5cb0d
+  sha256: 0c970c857d9bc35590215d3065ff3b29a0d36ca0e1ba9522a2ee0ab8a7b2854f
 
 build:
   noarch: python
