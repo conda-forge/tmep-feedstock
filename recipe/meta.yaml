@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 0c970c857d9bc35590215d3065ff3b29a0d36ca0e1ba9522a2ee0ab8a7b2854f
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
     - poetry-core
-    - python >=3.8,<4.0
+    - python {{ python_min }}
   run:
-    - python >=3.8,<4.0
+    - python >={{ python_min }},<4.0
     - unidecode >=1.3.7,<2.0.0
 
 test:
@@ -30,6 +30,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Josef-Friedrich/tmep
