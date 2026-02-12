@@ -13,7 +13,7 @@ source:
   sha256: 8e9343d14b5e215a37f6e9bfdfe233c1fd2d586cd49b6006d9762974d83c70a0
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
   python:
@@ -37,7 +37,7 @@ tests:
       python_version: ${{ python_min }}.*
   - requirements:
       run:
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
     script:
       - tmep-doc --introduction-rst
 
