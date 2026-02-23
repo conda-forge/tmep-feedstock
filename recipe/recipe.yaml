@@ -23,11 +23,11 @@ build:
 requirements:
   host:
     - pip
-    - poetry-core
+    - uv-build >=0.9.26,<0.10.0
     - python ${{ python_min }}.*
   run:
     - python >=${{ python_min }}
-    - unidecode >=1,<2
+    - unidecode >=1.4.0
 
 tests:
   - python:
